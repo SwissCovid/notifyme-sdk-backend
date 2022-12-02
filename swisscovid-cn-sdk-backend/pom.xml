@@ -21,15 +21,15 @@
     <name>SwissCovid CN SDK Backend</name>
 
     <properties>
-        <java-version>11</java-version>
+        <java-version>17</java-version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <jackson-version>2.11.1</jackson-version>
+        <jackson-version>2.14.1</jackson-version>
         <jsonwebtoken-version>0.11.2</jsonwebtoken-version>
-        <protobuf-java-version>3.12.1</protobuf-java-version>
-        <spring-boot-version>2.5.4</spring-boot-version>
+        <protobuf-java-version>3.21.9</protobuf-java-version>
+        <spring-boot-version>2.7.6</spring-boot-version>
         <testcontainers-version>1.16.0</testcontainers-version>
         <shedlock.version>4.24.0</shedlock.version>
 
@@ -344,8 +344,9 @@
             </plugin>
 
             <plugin>
-                <groupId>pl.project13.maven</groupId>
-                <artifactId>git-commit-id-plugin</artifactId>
+                <groupId>io.github.git-commit-id</groupId>
+                <artifactId>git-commit-id-maven-plugin</artifactId>
+                <version>5.0.0</version>
                 <executions>
                     <execution>
                         <id>retrieve-git-info</id>
@@ -422,6 +423,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.8</version>
                 <executions>
                     <!-- set arg line property for surefire -->
                     <execution>

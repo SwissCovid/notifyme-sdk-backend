@@ -191,7 +191,7 @@ public abstract class WSBaseConfig implements WebMvcConfigurer {
                 new ObjectMapper()
                         .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
                         .setSerializationInclusion(JsonInclude.Include.NON_ABSENT)
-                        .registerModules(new ProtobufModule(), new Jdk8Module());
+                        .registerModules(new ProtobufModule(), new Jdk8Module(), new JavaTimeModule());
         return new MappingJackson2HttpMessageConverter(mapper);
     }
 
