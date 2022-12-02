@@ -12,12 +12,14 @@ package ch.ubique.swisscovid.cn.sdk.backend.ws.util;
 
 import ch.ubique.swisscovid.cn.sdk.backend.model.keycloak.KeyCloakPublicKey;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
 import java.io.IOException;
 import java.net.URL;
 
 public class KeyHelper {
 
-  private static ObjectMapper objectMapper = new ObjectMapper();
+  private static ObjectMapper objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
 
   private KeyHelper() {}
 
